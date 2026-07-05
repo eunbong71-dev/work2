@@ -1,0 +1,43 @@
+/* 기본 폰트·색상 */
+* { box-sizing:border-box; margin:0; padding:0; font-family:'Inter',sans-serif; }
+body { color:#fff; background:#0a7e8c; min-height:100vh; display:flex; flex-direction:column; }
+
+/* 히어로 배경 */
+.hero {
+  background: linear-gradient(135deg, #0a7e8c, #1e3c72);
+  background-image: url('assets/mountain.jpg'); /* 산 사진을 assets 폴더에 넣어 주세요 */
+  background-size: cover; background-position:center;
+  text-align:center; padding:4rem 1rem; position:relative;
+}
+.hero::after { content:''; position:absolute; inset:0; background:rgba(0,0,0,0.4); }
+
+.hero h1 { font-size:2.5rem; margin-bottom:0.5rem; position:relative; }
+.hero .date { font-size:1.2rem; margin-bottom:1.5rem; position:relative; }
+
+.btn-primary {
+  display:inline-block; padding:.8rem 1.5rem; background:#fff; color:#1e3c72;
+  border-radius:8px; text-decoration:none; font-weight:600; transition:transform .2s;
+}
+.btn-primary:hover { transform:translateY(-3px); }
+
+.details { padding:2rem 1rem; background:#0c5d6f; }
+.details h2 { margin-bottom:.8rem; }
+.map-link { color:#a0e7ff; text-decoration:underline; }
+
+/* RSVP 카드 – 글래스모피즘 */
+.rsvp-card {
+  margin:2rem auto; max-width:400px; padding:2rem;
+  background:rgba(255,255,255,0.15); border-radius:12px; backdrop-filter:blur(12px);
+  text-align:center;
+}
+.rsvp-card input { width:100%; padding:.6rem; margin:0.5rem 0; border:none; border-radius:6px; }
+.rsvp-card button { margin-top:.8rem; padding:.6rem 1rem; background:#fff; color:#1e3c72; border:none; border-radius:6px; cursor:pointer; font-weight:600; }
+.rsvp-card .reset-btn { background:#f0f0f0; color:#333; margin-left:.5rem; }
+.rsvp-card .thanks { margin-top:1rem; font-size:1.1rem; }
+
+/* 신청자 리스트 */
+#registrationsList { list-style:none; padding:0; margin-top:1rem; text-align:left; }
+#registrationsList li { background:rgba(255,255,255,0.2); margin:0.3rem 0; padding:0.5rem; border-radius:6px; display:flex; justify-content:space-between; align-items:center; }
+.cancel-btn { background:#ff6b6b; color:#fff; border:none; border-radius:4px; padding:0.2rem 0.5rem; cursor:pointer; font-size:0.9rem; }
+
+footer { margin-top:auto; padding:1rem; text-align:center; font-size:.9rem; background:#083b4a; }

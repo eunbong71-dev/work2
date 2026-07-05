@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>🏔️ 북한산 백운대 트레킹 초대장</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="hero">
+    <h1>북한산 백운대 트레킹</h1>
+    <p class="date">2026‑07‑08 (수) 09:00 출발</p>
+    <a href="#register" class="btn-primary">신청하기</a>
+  </section>
+
+  <section class="details">
+    <h2>🗺️ 코스 안내</h2>
+    <p>출발: 북한산 입구 → 백운대 정상까지 왕복 약 10 km</p>
+    <p>난이도: 중급</p>
+    <a href="https://www.google.com/maps/search/?api=1&query=북한산+백운대" target="_blank" class="map-link">
+      구글 지도에서 보기 ▶
+    </a>
+  </section>
+
+  <section id="register" class="rsvp-card">
+    <!-- Admin reset button (visible to app creator) -->
+    <!-- script.js – 간단 로컬 저장소 기반 신청 폼 -->
+    <!-- Added admin reset functionality -->
+    <button id="resetAllBtn" style="margin-bottom:1rem; background:#ff4444; color:#fff; border:none; padding:0.5rem 1rem; border-radius:6px; cursor:pointer;">신청 인원 초기화</button>
+    <h2>✨ 신청하기 (학번·성명)</h2>
+    <form id="rsvpForm">
+      <input type="text" name="studentId" placeholder="학번" required />
+      <input type="text" name="name" placeholder="성명" required />
+      <button type="submit">신청</button>
+      <button type="reset" class="reset-btn">취소</button>
+    </form>
+    <p class="thanks" hidden>신청이 접수되었습니다! 🎉</p>
+    <h3>신청자 리스트</h3>
+    <ul id="registrationsList"></ul>
+  </section>
+
+  <footer>© 2026 Hiking Club. All rights reserved.</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
